@@ -13,6 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="images/empicon.png">
 </head>
 
 <body>
@@ -27,18 +28,18 @@
     $error = NULL;
     $success = NULL;
 
-    if(isset($_POST["change"])){
+    if (isset($_POST["change"])) {
         $password = $_POST["password"];
         $cpassword = $_POST["cpassword"];
-        if($password == $cpassword){
+        if ($password == $cpassword) {
             $user_mail = $_SESSION["email"];
             $password = sha1($password);
             $changepwd = $mysqli->query("UPDATE userdetails SET password = '$password' WHERE email = '$user_mail'");
-            if($changepwd){
+            if ($changepwd) {
                 $success = "password changed successfully!";
                 unset($_SESSION["changepermission"]);
             }
-        }else{
+        } else {
             $error = "passwords dont match, try again!";
         }
     }

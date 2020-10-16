@@ -13,6 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="images/empicon.png">
 </head>
 
 <body>
@@ -69,18 +70,18 @@
         }
     }
 
-    if(isset($_POST["enter"])){
+    if (isset($_POST["enter"])) {
         $email = $_POST["email"];
         $favfood = $_POST["favfood"];
         $favfood = sha1($favfood);
         $check = $mysqli->query("SELECT * FROM userdetails WHERE email = '$email' AND favfood = '$favfood'");
         $checkrow = $check->fetch_assoc();
-        if($checkrow){
+        if ($checkrow) {
             session_start();
             $_SESSION["changepermission"] = TRUE;
             $_SESSION["email"] = $email;
-            header("Location: changepwd.php");        
-        }else{
+            header("Location: changepwd.php");
+        } else {
             $error = "Invalid email or favorite food, try again!";
         }
     }

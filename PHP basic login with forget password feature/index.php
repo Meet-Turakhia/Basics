@@ -13,6 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href="images/empicon.png">
 </head>
 
 <body>
@@ -21,11 +22,11 @@
     require("backend.php");
     session_start();
 
-    if(!isset($_SESSION["user_id"])){
+    if (!isset($_SESSION["user_id"])) {
         header("Location: login.php");
     }
 
-    if(isset($_POST["logout"])){
+    if (isset($_POST["logout"])) {
         session_destroy();
         header("Location: login.php");
     }
