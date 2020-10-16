@@ -32,7 +32,7 @@
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <h4>EXP 5</h4>
+        <h4>Login System</h4>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
