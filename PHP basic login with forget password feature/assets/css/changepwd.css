@@ -1,0 +1,27 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+body{
+  background-color: #e6e6e6 !important;
+}
+
+.container-fluid{
+  background-color:white;
+  margin-top: 12% !important;
+  width: 50% !important;
+  border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .container-fluid{
+  width: 90% !important;
+  margin-top: 32% !important;
+}
+}

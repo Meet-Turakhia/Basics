@@ -1,0 +1,45 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+body{
+  background-color: #e6e6e6 !important;
+}
+
+.container{
+  margin-top: 10% !important;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  background-color: #f1f1f1;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5% 0% 0.7% 0%;
+}
+
+.dropdown-content a:hover {
+  text-decoration: none;
+  background-color: #ddd;
+  color: #0275d8;
+}
+
+.show {display:block;}
